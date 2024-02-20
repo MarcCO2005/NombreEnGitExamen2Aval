@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Calcular consumo de la ciudad:"
-read $ciu
+read ciu
 con=0
 
 while read line
@@ -10,10 +10,8 @@ while read line
                 if [ $a = $ciu ]
                         then
                         aux=`echo $line | awk '{print $4}'`
-                        $con=$(( con + aux ))
-                     else
-                     echo "Vuelve a introducir la ciudad"
-                         
+                        con=$(( con + aux ))
+
                 fi
                 
                 
